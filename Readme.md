@@ -6,8 +6,6 @@ Weatherapi API Mapper api is an app that provides cusomt maps for the response f
 
 ## Tech
 
-Dillinger uses a number of open source projects to work properly:
-
 - Typescript
 - Firebase Realtime Database
 - node.js
