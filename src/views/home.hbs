@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="row  r-3 p-2">
+            <table class="table table-borderless table-dark">
+                <form id="forecast" method=post action="/forecast">
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Value</th>
+                            <th>Type</th>
+                            <th>Location</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Location</th>
+                            <td>
+                                <input type="text" class="form-control" id="location" name="location">
+
+                            </td>
+                            <td>string</td>
+                            <td>query</td>
+                            <td>Pass US Zipcode, UK Postcode, Canada Postalcode, IP address, Latitude/Longitude (decimal
+                                degree) or city name. Visit request parameter section to learn more</td>
+
+                        </tr>
+                        <tr class="info">
+                            <th scope="row">days</th>
+                            <td>
+                                <select name="days" id="days">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </td>
+                            <td>integer</td>
+                            <td>query</td>
+                            <td>Number of days of weather forecast. Value ranges from 1 to 10</td>
+                        </tr>
+                        <tr class="info">
+                            <th scope="row">aqi</th>
+                            <td>
+                                <select name="aqi" id="aqi">
+                                    <option selected="selected" value="no">no</option>
+                                    <option value="yes">yes</option>
+                                </select>
+                            </td>
+                            <td>string</td>
+                            <td>query</td>
+                            <td>Get air quality data</td>
+                        </tr>
+                        <tr class="info">
+                            <th scope="row">alerts</th>
+                            <td>
+                                <select name="alerts" id="alerts">
+                                    <option selected="selected" value="no">no</option>
+                                    <option value="yes">yes</option>
+                                </select>
+                            </td>
+                            <td>string</td>
+                            <td>query</td>
+                            <td>Get weather alert data</td>
+                        </tr>
+                        <tr>
+                            <h2>Forecast </h2>
+                            <th>
+                                <input type="submit" class="btn-primary">
+                            </th>
+                            </input>
+                        </tr>
+                    </tbody>
+                </form>
+            </table>
+
+        </div>
+
+        <div class="row  r-3 p-2">
+            <table class="table table-borderless table-dark">
+                <form id="current" method=post action="/current">
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Value</th>
+                            <th>Type</th>
+                            <th>Location</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Location</th>
+                            <td>
+                                <input type="text" class="form-control" id="location" name="location">
+
+                            </td>
+                            <td>string</td>
+                            <td>query</td>
+                            <td>Pass US Zipcode, UK Postcode, Canada Postalcode, IP address, Latitude/Longitude (decimal
+                                degree) or city name. Visit request parameter section to learn more</td>
+
+                        </tr>
+                        <tr class="info">
+                            <th scope="row">aqi</th>
+                            <td>
+                                <select name="aqi" id="aqi">
+                                    <option selected="selected" value="no">no</option>
+                                    <option value="yes">yes</option>
+                                </select>
+                            </td>
+                            <td>string</td>
+                            <td>query</td>
+                            <td>Get air quality data</td>
+                        </tr>
+                        <tr>
+                            <h2>Current </h2>
+                            <th>
+                                <input type="submit" class="btn-primary">
+                            </th>
+                            </input>
+                        </tr>
+                    </tbody>
+                </form>
+            </table>
+
+
+        </div>
+    </div>
+</body>
+
+</html>
