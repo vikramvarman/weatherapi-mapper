@@ -20,15 +20,16 @@ export function current(result: any, responseMeta: CurrentResponseMeta) {
 }
 
 export function forecast(result: any, responseMeta: ForecastResponseMeta) {
-  const forecastdayArry = result.forecastday.map((f: any) => {
+  const forecastdayArry = result.forecast.forecastday.map((f: any) => {
     const astro = {
-      [responseMeta.moon_illumination]: f.moon_illumination,
-      [responseMeta.moon_phase]: f.moon_phase,
-      [responseMeta.moonrise]: f.moonrise,
-      [responseMeta.moonset]: f.moonset,
-      [responseMeta.sunrise]: f.sunrise,
-      [responseMeta.sunset]: f.sunset,
+      [responseMeta.moon_illumination]: f.astro.moon_illumination,
+      [responseMeta.moon_phase]: f.astro.moon_phase,
+      [responseMeta.moonrise]: f.astro.moonrise,
+      [responseMeta.moonset]: f.astro.moonset,
+      [responseMeta.sunrise]: f.astro.sunrise,
+      [responseMeta.sunset]: f.astro.sunset,
     };
+
     return {
       ...f,
       astro,

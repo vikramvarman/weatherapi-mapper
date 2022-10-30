@@ -75,7 +75,9 @@ app.post(
         await Firebase.database().ref(`/response/forecast`).once("value")
       ).val();
 
-      const record = responseDto.current(weatherResponse.data, responseMeta);
+      console.log({ responseMeta });
+
+      const record = responseDto.forecast(weatherResponse.data, responseMeta);
 
       return res.send(record);
     } catch (e) {
