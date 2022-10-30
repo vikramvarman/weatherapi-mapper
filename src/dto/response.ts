@@ -15,7 +15,7 @@ export function current(result: any, responseMeta: CurrentResponseMeta) {
 
   return {
     ...result,
-    current: result.current,
+    location,
   };
 }
 
